@@ -1,0 +1,67 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body onload="init_map()">
+
+  <div id="login_div" class="main-div">
+    <h3>Firebase Web login Example</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+    <button onclick="create_users()">Create Users</button>
+    <button onclick="check_users()">Check Users</button>
+
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+       <a href="profile.html">Go to profile</a>
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <div>
+      <dialog id='event_dialog'>
+        <p> New Event </p>
+        Event Name
+        <input id='name'></input>
+        <br>
+        Time
+        <input id='time' type='datetime-local'></input>
+        <br>
+        address
+        <input id='address'></input>
+        <button onclick=create_event()>Create Event </button>
+      </dialog>
+    </div>
+    <div id='map'></div>
+    <div class="customMsgBox">
+      <header id="pm_header">Messages</header>
+      <iframe class="msgFrame" src="message/message.html">
+        <p>Your browser does not support iframes.</p>
+      </iframe>
+    </div>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfo4uUnrT-tgYvDqDL_cjzLNVodIoe8gU&callback=initMap"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDWIbVY_BLO-6W1SJ3SUZiPijxN4Ian-mE",
+      authDomain: "coms319-e4c91.firebaseapp.com",
+      databaseURL: "https://coms319-e4c91.firebaseio.com",
+      projectId: "coms319-e4c91",
+      storageBucket: "coms319-e4c91.appspot.com",
+      messagingSenderId: "805314466728"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>

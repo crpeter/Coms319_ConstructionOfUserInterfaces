@@ -1,0 +1,51 @@
+<body onload="load()" class="index-page">
+        <link rel="stylesheet" type="text/css" href="profile.css">
+
+    
+    <div class="wrapper">
+        <div class="header header-filter" style="background-image: url('https://i.imgsafe.org/dcc803a4b5.jpg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="card card-header">
+                            <img src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Circle Image" class="avatar img-circle img-responsive img-raised">
+                            <a href="#"><br><br><br><button class="badge btn btn-fab btn-fab-mini btn-round btn-blue"><i class="material-icons">Follow</i></button></a>
+                            <h1 id="id"></h1>
+                            <br><button onclick="uploadPic()">Edit Profile Picture</button><br><br>
+                            
+                            <div class="row cardindent">
+                                <div class="col-xs-4 col-md-4">
+                                    <b>4</b> Events
+                                </div>
+                                <div class="col-xs-4 col-md-4">
+                                    <b>2</b> following
+                                </div>
+                                <div class="col-xs-4 col-md-4">
+                                    <b>0</b> followers
+                                </div>
+                            </div>
+    
+                      
+                            
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+        <script>
+                // Initialize Firebase
+                var config = {
+                  apiKey: "AIzaSyDWIbVY_BLO-6W1SJ3SUZiPijxN4Ian-mE",
+                  authDomain: "coms319-e4c91.firebaseapp.com",
+                  databaseURL: "https://coms319-e4c91.firebaseio.com",
+                  projectId: "coms319-e4c91",
+                  storageBucket: "coms319-e4c91.appspot.com",
+                  messagingSenderId: "805314466728"
+                };
+                firebase.initializeApp(config);
+              </script>
+    
+    <script src="profile.js" type="text/javascript"></script>
+    </body>

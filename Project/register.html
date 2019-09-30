@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Firebase Register</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h3>Chit Chat</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="register()">Register Account</button>
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyDWIbVY_BLO-6W1SJ3SUZiPijxN4Ian-mE",
+          authDomain: "coms319-e4c91.firebaseapp.com",
+          databaseURL: "https://coms319-e4c91.firebaseio.com",
+          projectId: "coms319-e4c91",
+          storageBucket: "coms319-e4c91.appspot.com",
+          messagingSenderId: "805314466728"
+        };
+        firebase.initializeApp(config);
+      </script>
+      <script src="register.js"></script>
+
+</body>
+</html>

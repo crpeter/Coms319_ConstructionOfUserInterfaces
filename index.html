@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"> </script>
+
+    <!-- Place your code in the script tag below. You can also use an external .js file -->
+    <script>
+      const model = tf.loadModel(
+        "https://firebasestorage.googleapis.com/v0/b/coms319-e4c91.appspot.com/o/model.json?alt=media&token=1d231f4c-59d2-444b-90c1-9801aa10c3ab"
+    );
+    vocab  = ["awesome", "movie"];
+    txt = ["awesome"];
+
+    const parse = (t) => vocab.map((w, i) => t.reduce((a, b) => b === w ? ++a : a , 0));
+    seq = parse(txt);
+
+    input = tf.tensor(seq);
+    input = input.expandDims(0);
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>

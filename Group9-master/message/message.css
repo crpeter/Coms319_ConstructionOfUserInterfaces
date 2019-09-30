@@ -1,0 +1,40 @@
+nav ul{height:200px; width:250px;}
+nav ul{overflow:hidden; overflow-y:scroll;}
+
+#back_btn {
+    opacity: 0.0;
+}
+
+#msg_input {
+    opacity: 0.0;
+    display:inline;
+}
+
+#stupid_box {
+    list-style: none;
+    padding-left: 0;
+}
+
+#stupid_box li {
+    border-width: thin;
+    list-style-position:inside;
+
+    border-style: solid;
+    border-width: thin;
+    border-color: gray;
+    border-collapse: separate;
+    border-spacing: 10px;
+    border-radius: 7.5px;
+    text-align: center;
+    box-shadow: 0 2px 2px 0 rgba(10, 10, 10, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);
+
+    white-space: normal;
+    float: left;
+    width: 65%;
+    height: auto;
+    word-wrap: break-word;
+}
+
+* + li { 
+    margin-top: 5px; 
+}
